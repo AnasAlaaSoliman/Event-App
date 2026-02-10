@@ -43,8 +43,8 @@ class _HomepageState extends State<Homepage> {
         },
 
         currentIndex: page_index,
-        type: BottomNavigationBarType.fixed,
-        showUnselectedLabels: false,
+        type: BottomNavigationBarType.shifting,
+        showUnselectedLabels: true,
 
         items: [
           BottomNavigationBarItem(

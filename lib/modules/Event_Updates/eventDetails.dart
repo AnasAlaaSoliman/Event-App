@@ -1,5 +1,6 @@
 import 'package:events_app/core/theme/color_pallette/color_pallette.dart';
 import 'package:events_app/modules/Event_Updates/add_event.dart';
+import 'package:events_app/modules/Navigation_Screens/navigationPage.dart';
 import 'package:events_app/modules/customWidget/eventDataModel.dart';
 import 'package:flutter/material.dart';
 
@@ -34,16 +35,27 @@ class Eventdetails extends StatelessWidget {
               );
 
               if (updatedEvent != null) {
-
                 Navigator.pop(context, updatedEvent);
               }
             },
-            child: Image.asset("assets/icons/edit-2.png", height: 30, width: 30),
+            child: Image.asset(
+              "assets/icons/edit-2.png",
+              height: 30,
+              width: 30,
+            ),
           ),
 
           SizedBox(width: 15),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => Homepage(),
+                ),
+                (route) => false,
+              );
+            },
             child: Image.asset("assets/icons/trash.png", height: 30, width: 30),
           ),
         ],
