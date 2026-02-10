@@ -66,7 +66,7 @@ class Eventdetails extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
 
-              ///color: Colors.white,
+              //color: Colors.white,
             ),
             child: Text(
               eventdata.title,
